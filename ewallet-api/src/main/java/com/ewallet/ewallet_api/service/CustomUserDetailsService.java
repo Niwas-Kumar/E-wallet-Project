@@ -2,7 +2,6 @@ package com.ewallet.ewallet_api.service;
 
 import com.ewallet.ewallet_api.entity.User;
 import com.ewallet.ewallet_api.repository.UserRepository;
-import com.ewallet.ewallet_api.security.CustomUserDetails;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
