@@ -1,6 +1,6 @@
 package com.ewallet.ewallet_api.service;
 
-import com.ewallet.ewallet_api.entity.User;
+import com.ewallet.ewallet_api.model.User;
 import com.ewallet.ewallet_api.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -19,6 +19,6 @@ public class CustomUserDetailsService implements UserDetailsService {
         User user = userRepository.findByEmail(email)
                 .orElseThrow(() -> new UsernameNotFoundException("User not found with email: " + email));
 
-        return new CustomUserDetails(users);
+        return new CustomUserDetails(user);
     }
 }
